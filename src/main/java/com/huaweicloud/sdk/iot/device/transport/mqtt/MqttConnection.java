@@ -258,6 +258,7 @@ public class MqttConnection implements Connection {
         options.setConnectionTimeout(DEFAULT_CONNECT_TIMEOUT);
         options.setKeepAliveInterval(DEFAULT_KEEPLIVE);
         options.setAutomaticReconnect(true);
+        options.setMaxInflight(1000);
 
         Log.i(TAG, "try to connect to " + clientConf.getServerUri());
 
